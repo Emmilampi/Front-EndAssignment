@@ -1,4 +1,7 @@
 body {
+  margin: auto;
+  width: 960px;
+  text-align: center;
   background-color: rgb(203, 208, 208);
 }
 
@@ -17,12 +20,18 @@ h1 {
 ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style-type: none;
 }
 
 ul a {
   color: rgb(248, 248, 248);
   text-decoration: none;
+}
+
+ul img {
+  filter: invert(100);
+  margin-left: 40px;
 }
 
 li {
@@ -36,7 +45,7 @@ li:hover {
 .topnav {
   border: solid red; /*Border around*/
   background-color: #256b96;
-  padding: 10px;
+  margin: 10px;
 }
 
 section {
@@ -59,4 +68,23 @@ footer {
   justify-content: center;
   border: solid red;
   background-color: aliceblue;
+}
+
+@media only screen and (max-width: 550px) {
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  li {
+    padding: 5px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+  section img {
+    max-width: 200px;
+  }
 }
