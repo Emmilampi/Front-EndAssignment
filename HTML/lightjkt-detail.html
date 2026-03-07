@@ -9,6 +9,7 @@
     <!--Link to the css page-->
 
     <script src="../JS/script.js" defer></script>
+    <!--Link to the js page-->
 
     <link rel="stylesheet" href="https://use.typekit.net/ogc4zww.css" />
     <!--link to the typefont for the header-->
@@ -28,42 +29,39 @@
           <a href="shoes.html"> <li>Shoes</li></a>
           <a href="acc.html"> <li>Accessories</li></a>
           <a href="products.html"> <li>Shop All</li></a>
-          <a href="cart.html"
-            ><img src="../Img/cartlogo2.svg" width="25px" height="25px"
-          /></a>
+
+          <div class="cart-status">
+            <a href="cart.html"
+              ><img
+                src="../Img/cartlogo2.svg"
+                width="25px"
+                height="25px"
+                alt="Cart"
+              /><span id="cart">0</span>
+            </a>
+          </div>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="merchandise">
-        <figure>
-          <img src="../Img/fleece.jpg" alt="Fleece jacket" />
-          <h3>Fleece Jacket</h3>
-          <p>350 SEK</p>
-        </figure>
+      <figure class="productdetailoverview">
+        <div class="productdetailimg">
+          <img src="../Img/jktlight.jpg" alt="light jacket" />
+        </div>
 
-        <figure>
-          <img src="../Img/long.jpg" alt="Longjohns" />
-          <h3>LongJohns</h3>
-          <p>150 SEK</p>
-        </figure>
-        <figure>
-          <img src="../Img/pant.jpg" alt="black pants" />
-          <h3>Black Pants</h3>
-          <p>250 SEK</p>
-        </figure>
-        <figure>
-          <img src="../Img/pants.jpg" alt="light pants" />
-          <h3>Light Pants</h3>
+        <div class="productdetailtext">
+          <h2>Light Jacket</h2>
+          <h4>
+            A lightweight jacket for mild weather. This jacket is perfect for
+            those chilly days when you need a bit of warmth without the bulk.
+          </h4>
+          <p>Material: 100% polyester. <br />Machine washable.</p>
+
           <p>300 SEK</p>
-        </figure>
-        <figure>
-          <img src="../Img/tshirt.jpg" alt="t-shirt" />
-          <h3>T-Shirt</h3>
-          <p>250 SEK</p>
-        </figure>
-      </section>
+          <button>Add to Cart</button>
+        </div>
+      </figure>
     </main>
 
     <footer>

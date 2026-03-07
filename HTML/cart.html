@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/main.css" />
     <!--Link to the css page-->
 
-    <script src="JS/script.js" defer></script>
+    <script src="../JS/script.js" defer></script>
 
     <link rel="stylesheet" href="https://use.typekit.net/ogc4zww.css" />
     <!--link to the typefont for the header-->
@@ -34,6 +34,19 @@
         </ul>
       </nav>
     </header>
+
+    <main>
+      <h2>Shopping Cart</h2>
+      <div id="cart-items"></div>
+
+      <div id="cart-summary">
+        <p>Your shopping cart is empty.</p>
+        <h3>Total: <span id="cart-total">0</span> SEK</h3>
+
+        <button id="clear-cart">Empty Cart</button>
+        <button id="checkout-btn">Proceed to checkout</button>
+      </div>
+    </main>
 
     <footer>
       <p>Follow us on socials!</p>
