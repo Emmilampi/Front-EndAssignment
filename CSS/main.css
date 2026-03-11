@@ -1,7 +1,7 @@
 body {
   font-size: 1em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: auto;
+  margin: 0;
   width: 960px;
   text-align: center;
   background-color: rgb(203, 208, 208);
@@ -45,9 +45,8 @@ li:hover {
 }
 
 .topnav {
-  border: solid red; /*Border around*/
+  border: solid red; /*Placeholder border around*/
   background-color: #256b96;
-  margin: 10px;
 }
 
 section {
@@ -59,8 +58,12 @@ section img {
   width: 100%;
 }
 
-.backgroundimage img {
-  width: 1000px;
+.backgroundimage {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../Img/backgroundphoto1.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
 /*CART INFO*/
@@ -114,6 +117,15 @@ section img {
   display: grid;
   justify-items: start;
   margin-left: 50px;
+}
+
+button {
+  border: none;
+  background-color: #256b96;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 /*FOOTER*/
