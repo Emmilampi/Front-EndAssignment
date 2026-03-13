@@ -184,14 +184,23 @@ section img {
 
 /*ADD TO CART BUTTON*/
 
-.add-to-cart:hover {
+/*Inspiration for the add to cart button animation from this site:*/
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate3*/
+
+.add-to-cart {
   background-color: #256b96;
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 1em;
   cursor: pointer;
-  transform: scale(1.05);
+  border-radius: 2px;
+  box-shadow: 0 3px 2px #999;
+}
+
+.add-to-cart:active {
+  box-shadow: 0 3px #949494;
+  transform: translateY(3px);
 }
 
 /*CHECKOUT BUTTON*/

@@ -118,5 +118,4 @@ window.removeFromCart = function (index) {
   const removedItem = cart[index].name;
   cart.splice(index, 1);
   saveAndRefresh();
-  window.confirm(`${removedItem} removed from cart.`);
 };
