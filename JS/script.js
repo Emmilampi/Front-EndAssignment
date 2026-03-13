@@ -51,7 +51,6 @@ function addToCart(product) {
     cart.push({ ...product, quantity: 1 });
   }
   saveAndRefresh();
-  alert(`${product.name} added to cart!`);
 }
 //save cart to localStorage and update display
 function saveAndRefresh() {
