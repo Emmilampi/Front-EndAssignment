@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cold Days</title>
 
-    <link rel="stylesheet" href="../CSS/main.css" />
     <!--Link to the css page-->
+    <link rel="stylesheet" href="../CSS/main.css" />
 
+    <!--Link to the js page-->
     <script src="../JS/script.js" defer></script>
 
-    <!--link to first typeface-->
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/ogc4zww.css" /> -->
-
+    <!--link to the different fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,12 +19,16 @@
       rel="stylesheet"
     />
 
-    <!--link to the typefont for the header-->
+    <!--link to font awesome for the icons in footer-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
     <header>
-      <h1>Cold days</h1>
+      <a href="index.html"><h1>Cold days</h1></a>
 
       <h2>All you need to stay warm</h2>
 
@@ -38,7 +41,7 @@
           <a href="acc.html"> <li>Accessories</li></a>
           <a href="products.html"> <li>Shop All</li></a>
 
-          <button id="cart-button" type="button">
+          <button class="cart-button" type="button">
             <a href="cart.html"
               ><img src="../Img/cartlogo2.svg" width="25px" height="25px" /></a
             ><span id="cart-count">0</span>
@@ -47,21 +50,27 @@
       </nav>
     </header>
 
-    <main>
+    <main class="cart-main">
+      <!--The shopping cart section includes a heading, a div to display the items in the cart, and a summary section that shows the total price -->
       <h2>Shopping Cart</h2>
       <div id="cart-items" class="cart-container"></div>
-      <!--The shopping cart section includes a heading, a div to display the items in the cart, and a summary section that shows the total price and provides buttons to empty the cart or proceed to checkout. -->
-      <div id="cart-summary">
+
+      <div class="cart-summary">
         <p id="empty-message">Your shopping cart is empty.</p>
         <h3>Total: <span id="cart-total">0</span> SEK</h3>
 
-        <button id="clear-cart">Empty Cart</button>
-        <button id="checkout-btn">Proceed to checkout</button>
+        <button>Proceed to checkout</button>
       </div>
     </main>
 
     <footer>
       <p>Follow us on socials!</p>
+
+      <!--Social media icons inspired by this W3Schools tutorial: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp>-->
+
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-twitter"></a>
       <p>Copyright Cold Days &copy 2026</p>
     </footer>
   </body>

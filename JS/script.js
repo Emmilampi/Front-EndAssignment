@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//add to cart function, checks if item already exists and increases quantity, otherwise adds new item
+//Add to cart function, checks if item already exists and increases quantity, otherwise adds new item
 function addToCart(product) {
   const existing = cart.find((item) => item.id === product.id);
   if (existing) {
@@ -80,6 +80,7 @@ function renderCart() {
   // Clear current display
   cartItemsDiv.innerHTML = "";
 
+  // If cart is empty, show message and reset total
   if (cart.length === 0) {
     emptyMessage.style.display = "block";
     cartTotalSpan.textContent = "0";
@@ -96,6 +97,7 @@ function renderCart() {
     const itemDiv = document.createElement("div");
     itemDiv.classList.add("cart-item");
 
+    //Create HTML structure for each cart item, including image, name, price, quantity, total price, and remove button
     itemDiv.innerHTML = `
       <img src="${item.img}" width="50">
       <div class="cart-item-info">
@@ -103,7 +105,7 @@ function renderCart() {
         <p>${item.price} SEK × ${item.quantity}</p>
         <p class="cart-item-total">${itemTotal} SEK</p>
       </div>
-      <button class="remove-btn" onclick="removeFromCart(${index})">Ta bort</button>
+      <button class="remove-btn" style="margin-bottom: 70px;" onclick="removeFromCart(${index})">Remove</button>
     `;
     cartItemsDiv.appendChild(itemDiv);
   });
@@ -111,9 +113,10 @@ function renderCart() {
   cartTotalSpan.textContent = total;
 }
 
+//Remove item from cart, then save and refresh
 window.removeFromCart = function (index) {
   const removedItem = cart[index].name;
   cart.splice(index, 1);
   saveAndRefresh();
-  alert(`${removedItem} removed from cart.`);
+  window.confirm(`${removedItem} removed from cart.`);
 };
